@@ -1,12 +1,26 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState, useEffect } from "react";
+import { Context } from "../store/appContext";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
+	const { actions, store } = useContext(Context);
+	const navigate = useNavigate();
+
+	const handleLogout = () => {
+		// limpiar user data del localStorage
+		localStorage.removeItem("authToken");
+		localStorage.removeItem("user");
+		actions.logout();
+		// success message
+		alert("You have successfully logged out.");
+		navigate("/");
+	};
+
 	return (
-		<nav className="navbar navbar-light bg-light col-8 mx-auto">
+		<nav className="navbar navbar-dark bg-dark  mx-auto">
 			<div className="container">
 				<div className="dropdown">
-					<button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+					<button className="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 						Aqui hay cosas
 					</button>
 					<ul className="dropdown-menu">
@@ -14,21 +28,21 @@ export const Navbar = () => {
 							<li className="dropdown-item">Signup</li>
 						</Link>
 						<Link to="/loginView">
-						<li className="dropdown-item">Login</li>
+							<li className="dropdown-item">Login</li>
 						</Link>
 						<Link to="/profileView">
-						<li className="dropdown-item">Perfil</li>
+							<li className="dropdown-item">Perfil</li>
 						</Link>
-						<Link to="/">
-						<li className="dropdown-item">Editar</li>
-						</Link>
+
+						<li
+							className="dropdown-item"
+							onClick={handleLogout}
+						> Cerrar sesion
+						</li>
+
 					</ul>
 				</div>
-				<div className="ml-auto">
-					<Link to="/demo">
-						<button className="btn btn-primary">Check the Context in action</button>
-					</Link>
-				</div>
+
 			</div>
 		</nav>
 	);

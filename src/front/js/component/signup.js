@@ -73,7 +73,7 @@ export const Signup = () => {
 
 
     return (
-        <div className="container">
+        <div className="container text-white">
             <div className="row">
                 <div className="col-md-6 offset-md-3">
                     <h2>Súbete por aquí... Solo si quieres!</h2>
@@ -103,7 +103,7 @@ export const Signup = () => {
                                 required
 
                             />
-                            <small id="emailHelp" className="form-text text-muted">No compatiremos tu email con nadie. Te lo prometemos!</small>
+                            <small id="emailHelp" className="form-text text-white">No compatiremos tu email con nadie. Te lo prometemos!</small>
                         </div>
                         <div className="form-group">
                             <label htmlFor="password">Password</label>
@@ -111,7 +111,7 @@ export const Signup = () => {
                                 type="password"
                                 className="form-control inputStyle"
                                 id="password"
-                                placeholder="Ingrese la contraseña"
+                                placeholder="Te lo dejé sencillo para que no te compliques"
                                 value={formData.password}
                                 onChange={handleChangeBarr}
                                 required
@@ -130,9 +130,9 @@ export const Signup = () => {
                                 ></div>
                             </div>
                         </div>
-                        <button type="submit" className="btn btn-secondary me-2">Pinchame!</button>
+                        <button type="submit" className="me-2 mt-2">Pinchame!</button>
                         <Link to="/loginView">
-                            <button className="btn btn-secondary">Ir a login</button>
+                            <button className="me-2 mt-2">Ir a login</button>
                         </Link>
                     </form>
                 </div>
