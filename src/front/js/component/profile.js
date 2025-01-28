@@ -13,23 +13,23 @@ export const Profile = () => {
 
     const projects = [
         {
-            title: "Proyecto 1",
-            description: "Descripción del proyecto 1",
+            title: "TableClick",
+            description: "Proyecto de fin de curso. Una web para restaurante con atencion en la mesa directamente desde una tablet.",
             image: "https://via.placeholder.com/150"
         },
         {
-            title: "Proyecto 2",
-            description: "Descripción del proyecto 2",
+            title: "Autenticación",
+            description: "Este proyecto que estás viendo, que con dos cosas más servía como proyecto final de curso jajaja",
             image: "https://via.placeholder.com/150"
         },
         {
-            title: "Proyecto 2",
-            description: "Descripción del proyecto 2",
+            title: "StarWars API",
+            description: "Una API de SW con modelo de datos y relaciones entre planetas, personajes y vehículos",
             image: "https://via.placeholder.com/150"
         },
         {
-            title: "Proyecto 2",
-            description: "Descripción del proyecto 2",
+            title: "No me acuerdo",
+            description: "Descripción del proyecto no me acuerdo",
             image: "https://via.placeholder.com/150"
         }
     ]
