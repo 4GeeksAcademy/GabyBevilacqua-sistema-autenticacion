@@ -42,7 +42,7 @@ const Layout = () => {
                             <Route element={<Demo />} path="/demo" />
                             <Route element={<Single />} path="/single/:theid" />
                             <Route element={<h1>Not found!</h1>} />
-
+                            
                         </Route>
 
                         <Route element={<PrivateRoutes user={store.user} />}>
@@ -51,7 +51,7 @@ const Layout = () => {
                         </Route>
 
                     </Routes>
-                    <Footer />
+
                 </ScrollToTop>
             </BrowserRouter>
         </div>
